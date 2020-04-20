@@ -1,0 +1,90 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost:3306
+-- Tiempo de generación: 20-04-2020 a las 18:51:37
+-- Versión del servidor: 5.7.24
+-- Versión de PHP: 7.2.19
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `productos`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `prods`
+--
+
+CREATE TABLE `prods` (
+  `CODIGOARTICULO` varchar(255) COLLATE utf32_bin NOT NULL,
+  `SECCION` varchar(255) COLLATE utf32_bin NOT NULL,
+  `NOMBREARTICULO` varchar(255) COLLATE utf32_bin NOT NULL,
+  `PRECIO` decimal(45,0) NOT NULL,
+  `FECHA` date NOT NULL,
+  `IMPORTADO` varchar(50) COLLATE utf32_bin NOT NULL,
+  `PAISDEORIGEN` varchar(50) COLLATE utf32_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_bin;
+
+--
+-- Volcado de datos para la tabla `prods`
+--
+
+INSERT INTO `prods` (`CODIGOARTICULO`, `SECCION`, `NOMBREARTICULO`, `PRECIO`, `FECHA`, `IMPORTADO`, `PAISDEORIGEN`) VALUES
+('AR01', 'FERRETERÍA', 'DESTORNILLADOR', '7', '2000-10-22', 'True', 'ESPAÑA'),
+('AR02', 'CONFECCIÓN', 'TRAJE CABALLERO', '285', '2002-03-11', 'True', 'ITALIA'),
+('AR03', 'Deporte', 'COCHE TELEDIRIGIDO', '159', '2002-01-26', 'True', 'MARRUECOS'),
+('AR04', 'DEPORTES', 'RAQUETA TENIS', '93', '2000-03-20', 'True', 'USA'),
+('AR06', 'DEPORTES', 'MANCUERNAS', '60', '2000-09-13', 'True', 'USA'),
+('AR07', 'CONFECCIÓN', 'SERRUCHO', '30', '2001-03-23', 'True', 'FRANCIA'),
+('AR08', 'JUGUETERÍA', 'CORREPASILLOS', '103', '2000-04-11', 'True', 'JAPÓN'),
+('AR09', 'CONFECCIÓN', 'PANTALÓN SEÑORA', '174', '2000-01-10', 'True', 'MARRUECOS'),
+('AR10', 'JUGUETERÍA', 'CONSOLA VIDEO', '443', '2002-09-24', 'True', 'USA'),
+('AR11', 'CERÁMICA', 'TUBOS', '168', '2000-02-04', 'True', 'CHINA'),
+('AR12', 'FERRETERÍA', 'LLAVE INGLESA', '24', '2001-05-23', 'True', 'USA'),
+('AR13', 'CONFECCIÓN', 'CAMISA CABALLERO', '67', '2002-08-11', 'False', 'ESPAÑA'),
+('AR14', 'JUGUETERÍA', 'TREN ELÉCTRICO', '1505', '2001-07-03', 'True', 'JAPÓN'),
+('AR15', 'CERÁMICA', 'PLATO DECORATIVO', '54', '2000-06-07', 'True', 'CHINA'),
+('AR16', 'FERRETERÍA', 'ALICATES', '7', '2000-04-17', 'True', 'ITALIA'),
+('AR17', 'JUGUETERÍA', 'MUÑECA ANDADORA', '105', '2001-01-04', 'False', 'ESPAÑA'),
+('AR18', 'DEPORTES', 'PISTOLA OLÍMPICA', '47', '2001-02-02', 'True', 'SUECIA'),
+('AR19', 'CONFECCIÓN', 'BLUSA SRA.', '101', '2000-03-18', 'True', 'CHINA'),
+('AR20', 'CERÁMICA', 'JUEGO DE TE', '43', '2001-01-15', 'True', 'CHINA'),
+('AR21', 'CERÁMICA', 'CENICERO', '20', '2001-07-02', 'True', 'JAPÓN'),
+('AR22', 'FERRETERÍA', 'MARTILLO', '11', '2001-09-04', 'False', 'ESPAÑA'),
+('AR23', 'CONFECCIÓN', 'CAZADORA PIEL', '523', '2001-07-10', 'True', 'ITALIA'),
+('AR24', 'DEPORTES', 'BALÓN RUGBY', '112', '2000-11-11', 'True', 'USA'),
+('AR25', 'DEPORTES', 'BALÓN BALONCESTO', '75', '2001-06-25', 'True', 'JAPÓN'),
+('AR26', 'JUGUETERÍA', 'FUERTE DE SOLDADOS', '144', '2000-11-25', 'True', 'JAPÓN'),
+('AR27', 'CONFECCIÓN', 'ABRIGO CABALLERO', '500000', '2002-04-05', 'True', 'ITALIA'),
+('AR28', 'DEPORTES', 'BALÓN FÚTBOL', '44', '2002-07-04', 'False', 'ESPAÑA'),
+('AR29', 'CONFECCIÓN', 'ABRIGO SRA', '360', '2001-05-03', 'True', 'MARRUECOS'),
+('AR30', 'FERRETERÍA', 'DESTORNILLADOR', '9', '2002-02-20', 'True', 'FRANCIA'),
+('AR31', 'JUGUETERÍA', 'PISTOLA CON SONIDOS', '57', '2001-04-15', 'False', 'ESPAÑA'),
+('AR32', 'DEPORTES', 'CRONÓMETRO', '439', '2002-01-03', 'True', 'USA'),
+('AR33', 'CERÁMICA', 'MACETA', '29', '2000-02-23', 'False', 'ESPAÑA'),
+('AR34', 'OFICINA', 'PIE DE LÁMPARA', '40', '2001-05-27', 'True', 'TURQUÍA'),
+('AR35', 'FERRETERÍA', 'LIMA GRANDE', '22', '2002-08-10', 'False', 'ESPAÑA'),
+('AR36', 'FERRETERÍA', 'JUEGO DE BROCAS', '15', '2002-07-04', 'True', 'TAIWÁN'),
+('AR37', 'CONFECCIÓN', 'CINTURÓN DE PIEL', '4', '2002-05-12', 'False', 'ESPAÑA'),
+('AR38', 'DEPORTES', 'CAÑA DE PESCA', '270', '2000-02-14', 'True', 'USA'),
+('AR39', 'CERÁMICA', 'JARRA CHINA', '128', '2002-09-02', 'True', 'CHINA'),
+('AR40', 'DEPORTES', 'BOTA ALPINISMO', '144', '2002-05-05', 'False', 'ESPAÑA'),
+('AR41', 'DEPORTES', 'PALAS DE PING PONG', '22', '2002-02-02', 'False', 'ESPAÑA');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
